@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: set14-web
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: set14-web
+  template:
+    metadata:
+      labels:
+        app: set14-web
+    spec:
+      containers:
+        - name: set14-nginx
+          image: invalid
+          ports:
+            - containerPort: 80
